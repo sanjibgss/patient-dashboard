@@ -65,3 +65,6 @@ Route::get('/charts', [PatientVisitsController::class, 'getChartData'])->name('c
 Route::get('/cd', [PatientVisitsController::class, 'getCD']);
 
 
+Route::get('/diff', [PatientVisitsController::class, 'fCD']);
+
+

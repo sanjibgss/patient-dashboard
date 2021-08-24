@@ -128,20 +128,23 @@ class PatientVisitsController extends Controller
         return view('patientchart')->with('dates', $chartData);
 
 
-
       }
-      public function getCD()
+      public function fcd()
 
       {
+        $ch = $this->repository->fdc();
+        return $ch;
+
+        //return view('patientchart')->with('dates', $chartData);
           $from = date('2021-08-10');
-          $to = date('2021-08-12');
-          $patient=PatientVisit::whereDate('from_time', [$from, $to])->get();
+          $to = date('2021-08-15');
+         // $patient=PatientVisit::whereDate('from_time', [$from, $to])->get();
           //return $patient;
           //print_r('-------------------------------------------------------');
-          $firstday = date('Y-m-d', strtotime($patient));
-          $day = date('l',strtotime($firstday));
-          return $day;
-          $patientcount=PatientVisit::whereBetween('from_time', [$from, $to])->get()->count();
+          //$firstday = date('Y-m-d', strtotime($patient));
+          //$day = date('l',strtotime($firstday));
+          //return $day;
+         // $patientcount=PatientVisit::whereBetween('from_time', [$from, $to])->get()->count();
           //return $patientcount;
 
 
