@@ -6,6 +6,7 @@ use App\Http\Controllers\FormValidtionController;
 use App\Http\Controllers\PatientDetailsController;
 use App\Http\Controllers\PatientVisitsController;
 use App\Http\Controllers\HospitalDoctorController;
+use App\Http\Controllers\HospitalPatientDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,7 +73,7 @@ Route::get('/cd', [PatientVisitsController::class, 'getCD']);
 Route::get('/diff', [PatientVisitsController::class, 'fCD']);
 
 //division / no of patients
-Route::get('/patientschart', [HospitalDoctorController::class, 'getHospitalPatientData'])->name('patientschart');
+Route::get('/patientschart', [HospitalPatientDetailsController::class, 'getHospitalPatientData'])->name('patientschart');
 
 //division / doctors
 Route::get('/doctorschart', [HospitalDoctorController::class, 'getHospitalDoctorData'])->name('doctorschart');
