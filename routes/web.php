@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\FormValidtionController;
 use App\Http\Controllers\PatientDetailsController;
 use App\Http\Controllers\PatientVisitsController;
+use App\Http\Controllers\HospitalDoctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ use App\Http\Controllers\PatientVisitsController;
 Route::get('/home', function () {
     return view('home');
 })->name('home');
+
 Route::get('/patient', [FormValidtionController::class, 'createUserForm']);
 Route::post('/patient', [FormValidtionController::class, 'UserForm'])->name('validate.form');
 Route::get('/patient/{id}', [FormValidtionController::class, 'dataoperations']);
@@ -61,10 +63,20 @@ Route::get('/chart', function (Request $request) {
     // ...
     return view('patientbarchart');
 });
+
 Route::get('/charts', [PatientVisitsController::class, 'getChartData'])->name('charts');
+
 Route::get('/cd', [PatientVisitsController::class, 'getCD']);
 
 
 Route::get('/diff', [PatientVisitsController::class, 'fCD']);
+
+//division / no of patients
+Route::get('/patientschart', [HospitalDoctorController::class, 'getHospitalPatientData'])->name('patientschart');
+
+//division / doctors
+Route::get('/doctorschart', [HospitalDoctorController::class, 'getHospitalDoctorData'])->name('doctorschart');
+Route::get('/Da', [HospitalDoctorController::class, 'Da']);
+Route::get('/gdf', [HospitalDoctorController::class, 'gdf']);
 
 

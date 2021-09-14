@@ -133,13 +133,13 @@ class PatientVisitRepository
     public function getChartData()
 
     {
-        $startday = date_create('2021-08-9');
-        $endday = date_create('2021-08-15');
+        $startday = date_create('2021-08-18');
+        $endday = date_create('2021-08-24');
         $daysdiff = date_diff($startday, $endday);
         $dayscount=$daysdiff->format('%d');
-        $lastdate = date('Y-m-d', strtotime("2021-08-15"));
-        $firstdate = date('Y-m-d', strtotime("2021-08-9", strtotime($lastdate)));
-        $colors=array('#ff0000','#ffc0cb','#2e8b57','#6a5acd','#008080','#ffff00','#9acd32');
+        $lastdate = date('Y-m-d', strtotime("2021-08-24"));
+        $firstdate = date('Y-m-d', strtotime("2021-08-18", strtotime($lastdate)));
+        $colors=array('#ff0000','#ffc0cb','#2e8b57','#6a5acd','#008080','#ffff00','#9acd32','#6a5acd','#008080','#2e8b57');
         for ($i=0; $i<=$dayscount; $i++){
             $day= date('l', strtotime($firstdate));
 

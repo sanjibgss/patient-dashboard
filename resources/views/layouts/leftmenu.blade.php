@@ -48,12 +48,31 @@
                <div class="form-inline" >
                 <a href="{{ route('charts') }}" class="nav-link {{ (\Request::route()->getName() == 'charts') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-chart-bar"></i>&nbsp;
-                    <p> Chart
+                    <p> Visit Chart
 
                     </p>
                   </a>
 
                 </div>
+                <div class="form-inline" >
+                    <a href="{{ route('doctorschart') }}" class="nav-link {{ (\Request::route()->getName() == 'doctorschart') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-globe"></i>&nbsp;
+                        <p> Division/Doctor Chart
+
+                        </p>
+                      </a>
+
+                </div>
+                <div class="form-inline" >
+                    <a href="{{ route('patientschart') }}" class="nav-link {{ (\Request::route()->getName() == 'patientschart') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-globe"></i>&nbsp;
+                        <p> Division/Patient Chart
+
+                        </p>
+                      </a>
+
+                    </div>
+
 
 
 
