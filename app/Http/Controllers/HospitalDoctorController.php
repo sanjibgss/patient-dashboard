@@ -38,7 +38,7 @@ class HospitalDoctorController extends Controller
 
 
       }
-      public function gdf()
+      /*public function gdf()
 
       {
           $da = $this->repository->gdf();
@@ -46,7 +46,7 @@ class HospitalDoctorController extends Controller
           return $da;
 
 
-        }
+        }*/
 
 
 
