@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 
 
-class FormValidtionController extends Controller
+class FormValidtionController extends Controller 
 {
     private $repository;
     public function __construct(PatientRepository $repository)
