@@ -29,24 +29,7 @@ class HospitalDoctorController extends Controller
 
       }
 
-      public function Da()
 
-    {
-        $da = $this->repository->getHospitalDoctorData();
-
-        return $da;
-
-
-      }
-      /*public function gdf()
-
-      {
-          $da = $this->repository->gdf();
-
-          return $da;
-
-
-        }*/
 
 
 

@@ -3,8 +3,7 @@
 namespace App\Repository\Eloquent;
 
 
-//use App\Models\Patient as ModelsPatient;
-//use App\Repository\PatientRepositoryInterface;
+
 use Illuminate\Http\Request;
 use App\Models\PatientVisit;
 use Illuminate\Support\Collection;
@@ -58,11 +57,11 @@ class PatientVisitRepository
 
 
                );
-            }
-             return  $data =json_encode($output);
+        }
 
-        //}
-            //echo "<pre>";print_r($dates);
+
+
+
 
 
 
@@ -81,10 +80,9 @@ class PatientVisitRepository
         for ($i=0; $i<=$dayscount; $i++){
             $day= date('l', strtotime($firstdate));
 
-            // $dates[$i]['day']=$day;
-            // $dates[$i]['date']=$firstday;
+
             $patientcount=PatientVisit::whereDate('from_time', '=', $firstdate)->count();
-            //$patientcount=DB::table('patient_visits')->whereDate('from_time', '=', $firstday)->count();
+
             $firstdate= date('Y-m-d', strtotime('+1 day', strtotime($firstdate)));
             $output[] = array(
                 $day,
@@ -98,8 +96,7 @@ class PatientVisitRepository
             }
              return  $data =json_encode($output);
 
-        //}
-            //echo "<pre>";print_r($dates);
+
 
 
 
@@ -113,10 +110,9 @@ class PatientVisitRepository
         $colors=array('red','green','blue','orange','yellow','pink','grey');
         for ($i=0; $i<=6; $i++){
             $day= date('l', strtotime($firstday));
-            // $dates[$i]['day']=$day;
-            // $dates[$i]['date']=$firstday;
+
             $patientcount=PatientVisit::whereDate('from_time', '=', $firstday)->count();
-            //$patientcount=DB::table('patient_visits')->whereDate('from_time', '=', $firstday)->count();
+
             $firstday= date('Y-m-d', strtotime('+1 day', strtotime($firstday)));
             $output[] = array(
                 $day,
@@ -130,8 +126,8 @@ class PatientVisitRepository
             }
              return  $data =json_encode($output);
 
-        //}
-            //echo "<pre>";print_r($dates);
+        }
+
 
 
 
