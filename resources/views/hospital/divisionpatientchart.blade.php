@@ -35,6 +35,6 @@ google.setOnLoadCallback(drawChart);
     chart.draw(data, options);
   }
 </script>
-<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+<div id="columnchart_values" style="width: 1000px; height: 500px;"></div>
 
 @endsection
