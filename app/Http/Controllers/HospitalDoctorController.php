@@ -13,7 +13,7 @@ class HospitalDoctorController extends Controller
     private $repository;
     public function __construct(HospitalDoctorRepository $repository)
     {
-        //parent::__construct();
+        
         $this->repository = $repository;
     }
 
@@ -29,26 +29,4 @@ class HospitalDoctorController extends Controller
 
       }
 
-      public function Da()
-
-    {
-        $da = $this->repository->getHospitalDoctorData();
-
-        return $da;
-
-
-      }
-      public function gdf()
-
-      {
-          $da = $this->repository->gdf();
-
-          return $da;
-
-
-        }
-
-
-
-
-}
+    }       
