@@ -29,4 +29,5 @@ class HospitalDoctorController extends Controller
 
       }
 
+
     }       

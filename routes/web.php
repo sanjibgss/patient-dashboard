@@ -24,17 +24,13 @@ Route::get('/home', function () {
 
 Route::get('/patient', [FormValidtionController::class, 'createUserForm']);
 Route::post('/patient', [FormValidtionController::class, 'UserForm'])->name('validate.form');
-Route::get('/patient/{id}', [FormValidtionController::class, 'dataoperations']);
-Route::get('/data', [FormValidtionController::class, 'dataoperationd']);
-Route::get('/datas', [FormValidtionController::class, 'queriess']);
-Route::get('/datall', [FormValidtionController::class, 'queries']);
-Route::get('/dataf', [FormValidtionController::class, 'dataoperationf']);
+
 
 
 
 Route::get('/patientdetails', [PatientDetailsController::class, 'createPatientForm'])->name('patient-detail');
 Route::post('/patientdetails', [PatientDetailsController::class, 'PatientForm'])->name('validate.patientdetails');
-Route::get('/detailsrepo', [PatientDetailsController::class, 'details']);
+
 
 
 
@@ -42,8 +38,7 @@ Route::get('/detailsrepo', [PatientDetailsController::class, 'details']);
 
 Route::get('/patientvisits', [PatientVisitsController::class, 'createPatientVisitForm'])->name('patient-visit');
 Route::post('/patientvisits', [PatientVisitsController::class, 'PatientVisitForm'])->name('validate.patientvisits');
-Route::get('/visitrepo', [PatientVisitsController::class, 'visitdetails']);
-Route::get('/daterepo', [PatientVisitsController::class, 'fromdate']);
+
 
 
 
@@ -52,7 +47,6 @@ Route::get('/daterepo', [PatientVisitsController::class, 'fromdate']);
 Route::get('/', function (Request $request) {
     return view('index');
 });
-
 
 
 

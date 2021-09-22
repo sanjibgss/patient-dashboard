@@ -35,11 +35,9 @@ class PatientVisitsController extends Controller
       
       PatientVisit::create($request->all());
       return back()->with('success', 'Your patient Visiting Details form has been submitted.');
-  }
-  
 
-  
-      public function getChartData()
+ public function getChartData()
+
 
     {
         $chartData = $this->repository->getChartData();
@@ -48,7 +46,7 @@ class PatientVisitsController extends Controller
 
 
       }
-      
+
 
 
 

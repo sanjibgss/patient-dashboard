@@ -17,6 +17,7 @@ class PatientVisitRepository
    {
        return $this->model->all();
    }
+
    public function getChartData()
 
     {
@@ -29,7 +30,12 @@ class PatientVisitRepository
         $colors=array('#ff0000','#ffc0cb','#2e8b57','#6a5acd','#008080','#ffff00','#9acd32','#6a5acd','#008080','#2e8b57');
         for ($i=0; $i<=$dayscount; $i++){
             $day= date('l', strtotime($firstdate));
+
+
+
             $patientcount=PatientVisit::whereDate('from_time', '=', $firstdate)->count();
+
+
             $firstdate= date('Y-m-d', strtotime('+1 day', strtotime($firstdate)));
             $output[] = array(
                 $day,
@@ -43,11 +49,14 @@ class PatientVisitRepository
             }
              return  $data =json_encode($output);
 
+
        
             
 
 
 
 
+
     }
+
 }
