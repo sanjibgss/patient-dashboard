@@ -13,15 +13,15 @@ class PatientVisitsController extends Controller
     private $repository;
     public function __construct(PatientVisitRepository $repository)
     {
-        //parent::__construct();
+        
         $this->repository = $repository;
     }
-// Create Form
+
  public function createPatientVisitForm(Request $request) {
     return view('patientvisitindex');
   }
 
-  // Store Form data in database
+  
   public function PatientVisitForm(Request $request) {
 
       // Form validation
@@ -32,12 +32,12 @@ class PatientVisitsController extends Controller
 
        ]);
 
-      //  Store data in database
+      
       PatientVisit::create($request->all());
       return back()->with('success', 'Your patient Visiting Details form has been submitted.');
-  }
 
  public function getChartData()
+
 
     {
         $chartData = $this->repository->getChartData();

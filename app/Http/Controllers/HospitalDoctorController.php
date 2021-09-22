@@ -13,7 +13,7 @@ class HospitalDoctorController extends Controller
     private $repository;
     public function __construct(HospitalDoctorRepository $repository)
     {
-        //parent::__construct();
+        
         $this->repository = $repository;
     }
 
@@ -30,8 +30,4 @@ class HospitalDoctorController extends Controller
       }
 
 
-
-
-
-
-}
+    }       

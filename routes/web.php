@@ -26,7 +26,7 @@ Route::get('/patient', [FormValidtionController::class, 'createUserForm']);
 Route::post('/patient', [FormValidtionController::class, 'UserForm'])->name('validate.form');
 
 
-//Patient Details routes....
+
 
 Route::get('/patientdetails', [PatientDetailsController::class, 'createPatientForm'])->name('patient-detail');
 Route::post('/patientdetails', [PatientDetailsController::class, 'PatientForm'])->name('validate.patientdetails');
@@ -34,7 +34,7 @@ Route::post('/patientdetails', [PatientDetailsController::class, 'PatientForm'])
 
 
 
-//Patient visit routes.....
+
 
 Route::get('/patientvisits', [PatientVisitsController::class, 'createPatientVisitForm'])->name('patient-visit');
 Route::post('/patientvisits', [PatientVisitsController::class, 'PatientVisitForm'])->name('validate.patientvisits');
@@ -61,10 +61,10 @@ Route::get('/charts', [PatientVisitsController::class, 'getChartData'])->name('c
 
 
 
-//division / no of patients
+
 Route::get('/patientschart', [HospitalPatientDetailsController::class, 'getHospitalPatientData'])->name('patientschart');
 
-//division / doctors
+
 Route::get('/doctorschart', [HospitalDoctorController::class, 'getHospitalDoctorData'])->name('doctorschart');
 
 

@@ -12,62 +12,13 @@ use Illuminate\Support\Facades\DB;
 class PatientVisitRepository
 {
 
-   /**
-    * UserRepository constructor.
-    *
-    * @param User $model
-    */
-   /*public function __construct(ModelsPatient $model)
-   {
-       parent::__construct($model);
-   }*/
-
-   /**
-    * @return Collection
-    */
+   
    public function all(): Collection
    {
        return $this->model->all();
    }
 
-
-
-
-     /*public function getChartData()
-
-    {
-        $firstday = date('Y-m-d', strtotime("now"));
-        $firstday = date('Y-m-d', strtotime('-6 day', strtotime($firstday)));
-        $colors=array('#ff0000','#ffc0cb','#2e8b57','#6a5acd','#008080','#ffff00','#9acd32');
-        for ($i=0; $i<=6; $i++){
-            $day= date('l', strtotime($firstday));
-
-            // $dates[$i]['day']=$day;
-            // $dates[$i]['date']=$firstday;
-            //$patientcount=PatientVisit::whereDate('from_time', '=', $firstday)->count();
-            //$patientcount=DB::table('patient_visits')->whereDate('from_time', '=', $firstday)->count();
-            $firstday= date('Y-m-d', strtotime('+1 day', strtotime($firstday)));
-            $patientcount=PatientVisit::whereDate('from_time', '=', $firstday)->count();
-            $output[] = array(
-                $day,
-                $patientcount,
-                $patientcount,
-                $colors[$i]
-
-
-
-               );
-        }
-
-
-
-
-
-
-
-
-    }*/
-    public function getChartData()
+   public function getChartData()
 
     {
         $startday = date_create('2021-08-18');
@@ -81,7 +32,9 @@ class PatientVisitRepository
             $day= date('l', strtotime($firstdate));
 
 
+
             $patientcount=PatientVisit::whereDate('from_time', '=', $firstdate)->count();
+
 
             $firstdate= date('Y-m-d', strtotime('+1 day', strtotime($firstdate)));
             $output[] = array(
@@ -97,40 +50,13 @@ class PatientVisitRepository
              return  $data =json_encode($output);
 
 
+       
+            
+
 
 
 
 
     }
-     /* public function getChartData()
 
-    {
-        $firstday = date('Y-m-d', strtotime("this week"));
-
-        $colors=array('red','green','blue','orange','yellow','pink','grey');
-        for ($i=0; $i<=6; $i++){
-            $day= date('l', strtotime($firstday));
-
-            $patientcount=PatientVisit::whereDate('from_time', '=', $firstday)->count();
-
-            $firstday= date('Y-m-d', strtotime('+1 day', strtotime($firstday)));
-            $output[] = array(
-                $day,
-                $patientcount,
-                $patientcount,
-                $colors[$i]
-
-
-
-               );
-            }
-             return  $data =json_encode($output);
-
-        }
-
-
-
-
-
-      }*/
 }
