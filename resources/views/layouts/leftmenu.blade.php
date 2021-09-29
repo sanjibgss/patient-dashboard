@@ -71,7 +71,16 @@
                         </p>
                       </a>
 
-                    </div>
+                </div>
+                <div class="form-inline" >
+                    <a href="{{ route('patientwaitingchart') }}" class="nav-link {{ (\Request::route()->getName() == 'patientwaitingchart') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-globe"></i>&nbsp;
+                        <p> Patient waiting Chart
+
+                        </p>
+                      </a>
+
+                </div>
 
 
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\PatientDetailsController;
 use App\Http\Controllers\PatientVisitsController;
 use App\Http\Controllers\HospitalDoctorController;
 use App\Http\Controllers\HospitalPatientDetailsController;
+use App\Http\Controllers\DivisionPatientWaitingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,9 @@ Route::get('/patientschart', [HospitalPatientDetailsController::class, 'getHospi
 
 //division / doctors
 Route::get('/doctorschart', [HospitalDoctorController::class, 'getHospitalDoctorData'])->name('doctorschart');
+
+//division / patient waiting time
+Route::get('/patientwaitingchart', [DivisionPatientWaitingController::class, 'getPatientWaitingData'])->name('patientwaitingchart');
 
 
 
