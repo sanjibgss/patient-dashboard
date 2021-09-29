@@ -70,6 +70,10 @@ Route::get('/doctorschart', [HospitalDoctorController::class, 'getHospitalDoctor
 
 //division / patient waiting time
 Route::get('/patientwaitingchart', [DivisionPatientWaitingController::class, 'getPatientWaitingData'])->name('patientwaitingchart');
+Route::get('/gcd', [DivisionPatientWaitingController::class, 'gcd']);
+
+
+
 
 
 

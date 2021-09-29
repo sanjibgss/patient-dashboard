@@ -28,6 +28,17 @@ class DivisionPatientWaitingController extends Controller
 
 
       }
+      public function gcd()
+
+      {
+          $chartData = $this->repository->gcd();
+          return $chartData;
+
+         // return view('hospital.divisionpatientwaiting')->with('data', $chartData);
+
+
+        }
+
 
 
 
